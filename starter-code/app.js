@@ -11,7 +11,7 @@ Test this function by hand in the console to get it working, and when you think 
 function sum(a, b) { //eslint-disable-line
   let sumRes =
     parseInt(a) + parseInt(b),
-    message = 'The sum of ' + a + ' and ' + b + ' is ' + sumRes + '.',
+    message = `The sum of ${a} and ${b} is ${sumRes}.`,
     res = [sumRes, message];
   return res;
 }
