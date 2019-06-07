@@ -11,7 +11,7 @@ Test this function by hand in the console to get it working, and when you think 
 function sum(a, b) { //eslint-disable-line
   let sumRes =
     parseInt(a) + parseInt(b),
-    message = 'The sum of ' + a + ' and ' + b + ' is ' + sumRes + '.',
+    message = `The sum of ${a} and ${b} is ${sumRes}.`,
     res = [sumRes, message];
   return res;
 }
@@ -32,10 +32,14 @@ Test this function by hand in the console to get it working, and when you think 
 // Write your code here
 function multiply(a, b) { //eslint-disable-line
 
+  let productRes = a * b,
+    resMessage = `The product of ${a} and ${b} is ${productRes}.`,
+    res = [productRes, resMessage];
+  return res;
 }
 
 // Here is the test for multiply(); uncomment it to run it
-// testMultiply(5,9);
+testMultiply(5,9);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
