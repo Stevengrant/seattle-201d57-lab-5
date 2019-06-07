@@ -110,11 +110,16 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function multiplyArray(multArr) { //eslint-disable-line
-
+  /* We're setting the 1st item to result so we can avoid multiplying undefined (or anything else for that matter) and instead are setting the first attribute */
+  let result = multArr[0];
+  for ( let i = 1; i < multArr.length; i++){
+    result = multiply(result,multArr[i])[0];
+  }
+  return [result, `The numbers ${multArr.toString()} have a product of ${result}.`];
 }
 
 // Here is the test for multiplyArray(); uncomment it to run it
-// testMultiplyArray(testArray);
+ testMultiplyArray(testArray);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
 
